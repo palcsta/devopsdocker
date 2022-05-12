@@ -1,0 +1,21 @@
+$ docker pull devopsdockeruh/simple-web-service:ubuntu
+$ docker run devopsdockeruh/simple-web-service:alpine
+$ docker images
+
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   14 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   14 months ago   15.7MB
+
+#about ~70 MB more in ubuntu
+#I entered the alpine container:
+
+$ docker exec -it magical_bassi sh
+/usr/src/app # cat text.log 
+2022-05-10 12:36:07 +0000 UTC
+2022-05-10 12:36:09 +0000 UTC
+2022-05-10 12:36:11 +0000 UTC
+2022-05-10 12:36:13 +0000 UTC
+2022-05-10 12:36:15 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+#Secret message and functionality seem to be the same as before

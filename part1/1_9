@@ -1,0 +1,2 @@
+# this command didn't work without creating text.log file, otherwise it created empty folder
+docker run -d -v "/home/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service

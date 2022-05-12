@@ -1,0 +1,7 @@
+$ docker run -it --name looper ubuntu:latest sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+# paralelly opened another terminal and ran:
+$ docker exec -it looper bash
+$ apt update && apt install curl
+# switched back to previous terminal and entered helsinki.fi
+# got the desired response
+# perhaps other smart solutions would be to create some kind of pipe for curl

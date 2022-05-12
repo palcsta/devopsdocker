@@ -1,0 +1,4 @@
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
+3796525e8800   nginx     "/docker-entrypoint.…"   17 minutes ago   Up 17 minutes               80/tcp    xenodochial_tu
+ee32b36606f3   nginx     "/docker-entrypoint.…"   17 minutes ago   Exited (0) 14 minutes ago             upbeat_banach
+b64d63aa9896   nginx     "/docker-entrypoint.…"   17 minutes ago   Exited (0) 14 minutes ago             xenodochial_visvesvaraya
