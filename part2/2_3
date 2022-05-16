@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+    front:
+      #image: #devopsdockeruh/simple-web-service
+      environment:
+        - REACT_APP_BACKEND_URL=http://127.0.0.1:8080
+      build: ./example-frontend
+      ports:
+        - 5000:5000
+      command: ["serve","-s","-l","5000","build"]
+    back:
+      environment:
+        - REQUEST_ORIGIN=*
+        - GOPATH=/usr/local/go
+      build: ./example-backend
+      ports:
+        - 8080:8080
+      command: ["./server"]       

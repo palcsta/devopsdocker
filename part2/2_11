@@ -1,0 +1,6 @@
+# I did something very similar to the node example, added Dockerfile and docker-compose
+# I did this to the "full stack open" project of mine where 
+# npm(node package manager) did almost everything for me
+# everything worked in real-time with docker-compose up command
+# some content of the specific lines had to be changed compared to the material example
+# the application resides on heroku: https://maamme.herokuapp.com

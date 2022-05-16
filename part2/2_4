@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+    front:
+      #image: #devopsdockeruh/simple-web-service
+      environment:
+        - REACT_APP_BACKEND_URL=http://127.0.0.1:8080
+      build: ./example-frontend
+      ports:
+        - 5000:5000
+      command: ["serve","-s","-l","5000","build"]
+    back:
+      environment:
+        - REQUEST_ORIGIN=*
+        - GOPATH=/usr/local/go
+        - REDIS_HOST=redis
+      build: ./example-backend
+      restart: unless-stopped
+      ports:
+        - 8080:8080
+      command: ["./server"]    
+    redis:
+      image: redis
+      ports:
+        - 6379:6379    
+#networks:
